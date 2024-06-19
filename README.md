@@ -1,4 +1,4 @@
-## components of an HTTP request
+## Components of an HTTP request
 **ANS** 
 1. An HTTP method (discussed below) that defines the action.
 2. A URI (Uniform Resource Identifier) is the resource’s identifier on the server.
