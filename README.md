@@ -43,4 +43,8 @@
       1. Query Parameter: We can use query parameters to control the data returned in endpoint resources. It appears at the end of the URL after the question mark (?) and helps us to control the set of items and properties in responses, and the order of the items returned.
       For ex: https://api.github.com/user/repos?sort=created&direction=desc
       2. Path Parameters: Path parameters are variables in a URL path. They are used to point to a specific resource within a collection. We can define multiple PATH parameters and each of them is represented by a curly brace {}.
-      for Ex : https://api.github.com/users/:username/repos
+      for Ex: https://api.github.com/users/:username/repos
+
+## Filters
+      Filters can be used to implement custom authentication schemes, session management, logging, etc. To create a filter you need to implement the io.restassured.filter.Filter interface
+      given().filter(new MyFilter())
