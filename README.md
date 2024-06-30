@@ -16,8 +16,8 @@
 
 
 ## HTTP Methods
-      **GET**: Used for retrieving data from a specified resource.
-      **POST**: Used for submitting data to be processed to a specified resource.
+      GET: Used for retrieving data from a specified resource.
+      POST: Used for submitting data to be processed to a specified resource.
       PUT: Used for updating a resource or creating a new resource if it doesn’t exist.
       DELETE: Used for requesting the removal of a resource.
       PATCH: Used for applying partial modifications to a resource.
