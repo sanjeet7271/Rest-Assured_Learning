@@ -23,3 +23,19 @@
       PATCH: Used for applying partial modifications to a resource.
       OPTIONS: Used for describing the communication options for the target resource.
       HEAD: Similar to GET but retrieves only the headers, not the actual data.
+
+## Explain Rest-assured Code
+                        RestAssured.baseURI = resource.getBaseURI();
+                        			response = RestAssured.given().relaxedHTTPSValidation().headers("Authorization",AccessTokens.AUTHORISATION).header("User-Token",AccessTokens.USER_TOKEN).pathParam("login", "gose").log().all().when().get(request+"{login}").then().extract().response();
+
+
+## 'baseURL' and 'basePath' methods in REST Assured
+            1. 'baseURI'(String baseUri) Method: Specifies the base path for the API.
+            2. ‘basePath’(String basePath) Method: Specifies the base path for the API.
+                     given()
+                      .baseUri("https://api.example.com")
+                      .basePath("/v1")
+                  .when()
+                      .get("/resource")
+                  .then()
+                .statusCode(200);
