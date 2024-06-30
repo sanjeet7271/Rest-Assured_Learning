@@ -11,5 +11,5 @@
 **ANS**
 1. Session/cookies based authentication
 2. Basic authentication
-3.  authentication
+3. Digestive authentication
 4. OAuth
