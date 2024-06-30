@@ -22,7 +22,7 @@
       DELETE: Used for requesting the removal of a resource.
       PATCH: Used for applying partial modifications to a resource.
       OPTIONS: Used for describing the communication options for the target resource.
-      HEAD: Similar to GET but retrieves only the headers, not the actual data.
+      HEAD: Similar to GET, retrieving only the headers, not the actual data.
 
 ## Explain Rest-assured Code
                         RestAssured.baseURI = resource.getBaseURI();
@@ -39,3 +39,8 @@
                       .get("/resource")
                   .then()
                 .statusCode(200);
+## Parameters in Rest-assured
+      1. Query Parameter: We can use query parameters to control the data returned in endpoint resources. It appears at the end of the URL after the question mark (?) and helps us to control the set of items and properties in responses, and the order of the items returned.
+      For ex: https://api.github.com/user/repos?sort=created&direction=desc
+      2. Path Parameters: Path parameters are variables in a URL path. They are used to point to a specific resource within a collection. We can define multiple PATH parameters and each of them is represented by a curly brace {}.
+      for Ex : https://api.github.com/users/:username/repos
