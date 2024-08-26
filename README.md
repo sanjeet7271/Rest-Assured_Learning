@@ -135,3 +135,47 @@
                                 String email = response.jsonPath().get("email");
                                 String name = response.jsonPath().get("name");
                                 String id = response.jsonPath().get("id");
+
+## What are different authentication types used in API's?
+
+            🌟 Top 10 authentication types: 
+            
+            1️⃣ API Key Authentication:
+            Each API request must include an API key, a unique identifier associated with the client making the request.
+            Simple to implement but may lack the granularity of access control.
+            
+            2️⃣ Bearer Token Authentication (OAuth 2.0):
+            Clients include an access token in the authorisation header of the HTTP request.
+            Commonly used with OAuth 2.0, providing a standardised way to grant limited access to an HTTP service.
+            
+            3️⃣ Basic Authentication:
+            Requires the client to include a username and password in the request header.
+            Credentials are often Base64-encoded, but this method is not considered secure without additional encryption (e.g., using HTTPS).
+            
+            4️⃣ Digest Authentication:
+            Similar to Basic Authentication but more secure as it sends hashed values rather than plain text passwords.
+            Helps protect against certain types of attacks, but may still have vulnerabilities.
+            
+            5️⃣ OAuth 1.0:
+            An older version of OAuth that uses a signature method to authenticate requests.
+            Less commonly used in comparison to OAuth 2.0.
+            
+            6️⃣ JSON Web Tokens (JWT):
+            A compact, URL-safe means of representing claims to be transferred between two parties.
+            Often used for token-based authentication and includes information about the user and the permissions granted.
+            
+            7️⃣ OpenID Connect:
+            An authentication layer on top of OAuth 2.0 that adds identity information to the token.
+            Supports authentication and single sign-on (SSO) scenarios.
+            
+            8️⃣ Client Certificate Authentication:
+            Involves the use of digital certificates on the client side for authentication.
+            Provides a strong form of authentication but may be more complex to set up.
+            
+            9️⃣ API Tokens:
+            Similar to API keys, but typically have a longer lifespan and are associated with a specific user or application.
+            Used to authenticate the user or application making the API request.
+            
+            🔟 HMAC (Hash-based Message Authentication Code):
+            Involves using a secret key to generate a hash value that is included in the request.
+            Helps ensure the integrity and authenticity of the message.
