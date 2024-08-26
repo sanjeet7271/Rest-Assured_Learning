@@ -179,3 +179,34 @@
             🔟 HMAC (Hash-based Message Authentication Code):
             Involves using a secret key to generate a hash value that is included in the request.
             Helps ensure the integrity and authenticity of the message.
+
+## Top Interview Questions with Answers for Rest Assured.
+                  1) How do you handle response headers in Rest Assured tests?
+                  Answer: You can use the ‘header’ method to validate specific headers in the response. For example, checking the ‘Content-Type’ header:
+                  given() .when() .get("/endpoint") .then() .header("Content-Type", "application/json");
+                  
+                  2) What is the purpose of the Matchers class in Rest Assured?
+                  Answer: The Matchers class in Rest Assured provides various static methods for performing different types of assertions on the response.
+                  For example, Matchers.equalTo(value) is used to check if a response value is equal to the expected value. 
+                  
+                  3) How do you perform a POST request with a JSON payload in Rest Assured?
+                  Answer: To perform a POST request with a JSON payload, you can use the body() method to include the JSON content. For example:
+                  given() .body("{\"key\": \"value\"}") .when() .post("/endpoint") .then() .statusCode(201);
+                  
+                  4) What is the purpose of the 'relaxedHTTPSValidation()' method in Rest Assured?
+                  Answer: The relaxedHTTPSValidation() method is used to disable strict SSL certificate validation, allowing you to make requests to HTTPS endpoints without validating the SSL certificate.
+                  
+                  5) What is the purpose of the 'config(JsonConfig.jsonConfig())' method in Rest Assured?
+                  Answer: The config(JsonConfig.jsonConfig()) method is used to configure JSON serialization and deserialization settings. It allows you to customize how JSON data is processed during requests and responses.
+                  
+                  6) Explain the purpose of the 'auth().oauth2AuthorizationCodeFlow()' method in Rest Assured. 
+                  Answer: The auth().oauth2AuthorizationCodeFlow() method is used for OAuth 2.0 authentication using the authorization code flow. It helps in handling the authentication process with the authorization server.
+                  
+                  7) What is the purpose of the auth().none() method in Rest Assured? 
+                  Answer: The auth().none() method is used to indicate that no authentication is required for a particular request. It’s helpful when dealing with public endpoints that do not require authentication.
+                  
+                  8) How can you handle assertion failures gracefully in Rest Assured to continue with the execution of subsequent test steps? 
+                  Answer: You can use the softAssertions() method from the AssertJ library to create soft assertions, which allow the test to continue even if there are assertion failures. For example:
+                  SoftAssertions softAssert = new SoftAssertions();
+                  softAssert.assertThat(response.getStatusCode()).isEqualTo(200); softAssert.assertThat(response.getBody().jsonPath().getString("name")).isEqualTo("John Doe");
+                  softAssert.assertAll();
